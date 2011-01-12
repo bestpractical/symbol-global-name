@@ -1,0 +1,21 @@
+NAME
+    Symbol::Global::Name - finds name and type of a global variable
+
+SYNOPSIS
+        package My;
+        our $VERSION = '0.1';
+
+        use Symbol::Global::Name;
+        print Symbol::Global::Name->find( \$VERSION );
+
+        # prints '$My::VERSION'
+
+DESCRIPTION
+    Lookups symbol table to find an element by reference.
+
+AUTHOR
+    Ruslan Zakirov <ruz@bestpractical.com>
+
+LICENSE
+    Under the same terms as perl itself.
+
