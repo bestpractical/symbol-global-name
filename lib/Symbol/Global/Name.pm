@@ -38,6 +38,7 @@ our %REF_SYMBOLS = (
 =head2 find
 
     Symbol::Global::Name->find( \$VERSION );
+    Symbol::Global::Name->find( \$VERSION, package => 'My::Package' );
     Symbol::Global::Name->find( reference => \$VERSION );
     Symbol::Global::Name->find( reference => \$VERSION, package => 'My::Package' );
 
