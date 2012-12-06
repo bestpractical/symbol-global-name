@@ -101,13 +101,18 @@ sub _find {
         # reference
         next if ref($entry) eq 'SCALAR' || ref($entry) eq 'REF';
 
-        my $entry_ref = *{$entry}{ ref($ref) };
+        my $ref_type = ref($ref);
+
+        # regex/arrayref/hashref/coderef are stored in SCALAR glob
+        $ref_type = 'SCALAR' if $ref_type eq 'REF';
+
+        my $entry_ref = *{$entry}{ $ref_type };
         next unless $entry_ref;
 
         # if references are equal then we've found
         if ( $entry_ref == $ref ) {
             $last_package = $pack;
-            return ( $REF_SYMBOLS{ ref($ref) } || '*' ) . $pack . $k;
+            return ( $REF_SYMBOLS{ $ref_type } || '*' ) . $pack . $k;
         }
     }
     return '';
