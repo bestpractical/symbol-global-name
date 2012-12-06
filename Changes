@@ -1,0 +1,4 @@
+0.02    Thu Dec  6 14:54:06 PST 2012
+    • Correctly find names when the value is a reference, such as regex
+
+0.01    Wed Jan 12 17:39:05 2011 +0300
