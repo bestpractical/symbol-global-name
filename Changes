@@ -1,3 +1,6 @@
+0.03
+    • Correctly nest into subpackages
+
 0.02    Thu Dec  6 14:54:06 PST 2012
     • Correctly find names when the value is a reference, such as regex
 
