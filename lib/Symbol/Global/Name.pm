@@ -97,7 +97,7 @@ sub _find {
         # get entry for type we are looking for
 
         # XXX skip references to scalars or other references.
-        # Otherwie 5.10 goes boom. may be we should skip any
+        # Otherwise 5.10 goes boom. maybe we should skip any
         # reference
         next if ref($entry) eq 'SCALAR' || ref($entry) eq 'REF';
 
