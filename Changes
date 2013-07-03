@@ -1,3 +1,6 @@
+0.04    Wed Jul  3 19:14:17 EST 2013
+    • Fix an odd overloaded stringification found in Math::BigInt
+
 0.03    Thu Mar 14 20:04:23 MSK 2013
     • Correctly nest into subpackages
 
